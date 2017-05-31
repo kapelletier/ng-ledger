@@ -1,0 +1,17 @@
+input {
+    width:100%;
+    border:1px solid #ddd;
+}
+
+input.invalid{
+    border: 1px solid #ff0000;
+}
+
+.edit-host{
+   line-height: inherit;
+}
+
+.edit-host:focus
+{
+    border: 1px solid green;
+}

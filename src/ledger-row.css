@@ -1,0 +1,24 @@
+.fab-add-button{
+    width:20px;
+    height:20px;
+    border-radius: 14px;
+    padding:4px;
+    border:none;
+    font-size:12px;
+    line-height:10px;
+}
+
+td {
+    padding:.25rem;
+    position:relative;
+}
+
+td input {
+    width:100%;
+}
+
+td.tool-col{
+    background-color:#eee;
+    min-width:28px;
+    max-width:28px;
+}

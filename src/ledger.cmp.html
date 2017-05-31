@@ -1,0 +1,13 @@
+<div class="ledger-container">
+<div *ngIf="InitializeError===true">Can't initialize the ledger.</div>
+<table *ngIf="InitializeError===false">
+    <thead>
+        <th [style.width]="col.width" *ngFor="let col of ColumnDefinitions">{{col.label}}</th>
+        <th class="tool-col"><button (click)="AddRow()" class="fab-add-button"><i class="fa fa-plus"></i></button></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of LedgerData, let rowIndex = index" [ColumnDefs]="ColumnDefinitions" [Model]="row" [RowIndex]="rowIndex" ledger-row>
+        </tr>
+    </tbody>
+</table>
+</div>

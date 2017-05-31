@@ -1,0 +1,54 @@
+.ledger-container {
+    position:relative;
+}
+
+table {
+    border: 1px solid #e5e6e7;
+    width:100%;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color:#eee;
+}
+
+th {
+    padding:.25rem;
+}
+
+th:not(:first-child) {
+    border-left: 1px solid #ccc;
+}
+
+tr:focus{
+    background:#ff00ff;
+}
+
+
+
+.fab-add-button{
+    width:20px;
+    height:20px;
+    border-radius: 14px;
+    padding:4px;
+    border:none;
+    font-size:12px;
+    line-height:10px;
+}
+
+td {
+    padding:.25rem;
+    position:relative;
+}
+
+td input {
+    width:100%;
+}
+
+td.tool-col{
+    background-color:#eee;
+    min-width:28px;
+    max-width:28px;
+}

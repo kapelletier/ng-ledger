@@ -1,0 +1,4 @@
+<div class="edit-host">
+    <!--> *ngIf="(IsEditing && ColumnIndex===0)"</-->
+    <input [class.invalid]="IsInValid" cellFocus [attr.type]="ColumnDefinition.dataType"  [formControl]="cellValue">
+</div>

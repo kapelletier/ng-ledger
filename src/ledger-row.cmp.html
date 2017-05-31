@@ -1,0 +1,5 @@
+
+<td [style.width]="def.width" [ngSwitch]="def?.inputType" *ngFor="let def of ColumnDefs, let colIndex=index">
+    <ledger-cell [ColumnDefinition]="def" [ColumnIndex]="colIndex" [RowIndex]="RowIndex" [DataValue]="Model"></ledger-cell>
+</td>
+<td class="tool-col"><button (click)="RequestRemoveRow(RowIndex)" class="fab-add-button" *ngIf="IsToolButtonVisible"><i class="fa fa-minus"></i></button></td>
