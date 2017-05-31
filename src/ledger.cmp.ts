@@ -13,16 +13,16 @@ import {
 
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS } from '@angular/forms'
 import { Subscription } from 'rxjs/Subscription';
-import { IColumnDefinition } from './model/IColumnDefinition';
+import { IColumnDefinition } from './IColumnDefinition';
 import { LedgerService } from './ledger.service';
-import { ICellValueChangeArgs } from './model/ICellValueChangeArgs';
-import { ICellValidityChangeArgs } from './model/ICellValidityChangeArgs';
+import { ICellValueChangeArgs } from './ICellValueChangeArgs';
+import { ICellValidityChangeArgs } from './ICellValidityChangeArgs';
 import { LedgerRowComponent } from './ledger-row.cmp'
 
 @Component({
   styleUrls: ['./ledger.css'],
   selector: 'ledger',
-  templateUrl: "./ledger.cmp.html",
+  templateUrl: './ledger.cmp.html',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

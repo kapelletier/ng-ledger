@@ -44,3 +44,7 @@ export class LedgerModule {
 //     };
 //   }
 }
+
+export {ICellValidityChangeArgs} from './ICellValidityChangeArgs';
+export {ICellValueChangeArgs} from './ICellValueChangeArgs';
+export {IColumnDefinition} from './IColumnDefinition';

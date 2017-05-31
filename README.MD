@@ -8,24 +8,15 @@ To install this library, run:
 $ npm install ng-ledger --save
 ```
 
-## Consuming your library
+## Consuming the library
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ng-ledger
-```
-
-and then from your Angular `AppModule`:
+From an Angular Module such as `AppModule`:
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {} ...
 
-import { AppComponent } from './app.component';
-
-// Import your library
-import { SampleModule } from 'ng-ledger';
+// Import the ledger module
+import { LedgerModule } from 'ng-ledger';
 
 @NgModule({
   declarations: [
@@ -35,7 +26,7 @@ import { SampleModule } from 'ng-ledger';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    LedgerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,28 +34,41 @@ import { SampleModule } from 'ng-ledger';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+## Development
+Once your library is imported, you can use it:
+```typescript
+import { Component } from '@angular/core';
+import { IColumnDefinition } from "ng-ledger";
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Add Some Rows';
+  public ColumnDefs: IColumnDefinition[] = [
+        { inputType: "input", dataType: "text", fieldName: "sample", label: "Sample Name", width:"40%" },
+        { inputType: "input",dataType: "text", fieldName: "group", label: "Group", width: "40%" },
+        { inputType: "input", dataType: "number", fieldName: "readCount", label: "Total Read Count", width:"20%" }
+    ];
+
+   public RowData: any[] = [];
+}
+```
+
+Here's what the HTML can look like:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use your library component in the html of a component -->
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
-```
-
-## Development
-
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
-```
-
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
+<!-- 
+  Validate Cells turns on/off cell-level validation
+  It works with standard ngModel binding or reactive forms as well
+  ColumnDefinitions allows you to define column properties... see above
+ -->
+<ledger [ValidateCells]="true" [(ngModel)]="RowData" [ColumnDefinitions]="ColumnDefs"></ledger> 
 ```
 
 ## License

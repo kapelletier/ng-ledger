@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import {ICellValueChangeArgs} from './model/ICellValueChangeArgs';
-import {ICellValidityChangeArgs} from './model/ICellValidityChangeArgs';
+import {ICellValueChangeArgs} from './ICellValueChangeArgs';
+import {ICellValidityChangeArgs} from './ICellValidityChangeArgs';
 
 @Injectable()
 export class LedgerService {

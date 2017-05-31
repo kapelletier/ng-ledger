@@ -10,14 +10,14 @@ import {
     ViewChild
 } from '@angular/core';
 
-import { IColumnDefinition } from './model/IColumnDefinition';
+import { IColumnDefinition } from './IColumnDefinition';
 import { LedgerService } from './ledger.service';
 import { LedgerCellComponent } from './ledger-cell.cmp';
 
 @Component({
     styleUrls: ['./ledger-row.css'],
     selector: '[ledger-row]',
-    templateUrl: "./ledger-row.cmp.html"
+    templateUrl: './ledger-row.cmp.html'
 })
 export class LedgerRowComponent implements OnInit, AfterViewInit {
     @Input() ColumnDefs: IColumnDefinition[];

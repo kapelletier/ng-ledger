@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 
 import { LedgerService } from './ledger.service';
-import { ICellValueChangeArgs } from './model/ICellValueChangeArgs';
-import { ICellValidityChangeArgs } from './model/ICellValidityChangeArgs';
+import { ICellValueChangeArgs } from './ICellValueChangeArgs';
+import { ICellValidityChangeArgs } from './ICellValidityChangeArgs';
 import { FormControl, Validators } from '@angular/forms';
 import {CellFocus} from './cell-focus.directive';
 import { Observable } from 'rxjs/Observable';
@@ -18,7 +18,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   styleUrls: ['./ledger-cell.css'],
   selector: 'ledger-cell',
-  templateUrl: "./ledger-cell.cmp.html"
+  templateUrl: './ledger-cell.cmp.html'
 })
 export class LedgerCellComponent implements OnInit, AfterViewInit {
   @Input() ColumnDefinition: any;
